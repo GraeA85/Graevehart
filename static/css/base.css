@@ -21,6 +21,9 @@ body {
 
 .logo-font {
     text-transform: uppercase;
+    background: aliceblue;
+    color: black;
+    text-align: center;
 }
 
 .main-logo-link {
