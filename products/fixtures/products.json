@@ -1,0 +1,275 @@
+[
+    {
+      "pk": 1,
+      "model": "products.product",
+      "fields": {
+        "sku": "aw5001340155",
+        "name": "Royal Labradoodle in Oak Frame",
+        "description": "Royal Labradoodle by Graevehart, in solid Oak Picture Frame. 30cm x 30cm",
+        "price": 49.99,
+        "category": 1,
+        "image_url": " ",
+        "image": "aw1.jpg"
+      }
+    },
+    {
+      "pk": 2,
+      "model": "products.product",
+      "fields": {
+        "sku": "aw5001600425",
+        "name": "Royal Labradoodle in Walnut Frame",
+        "description": "Royal Labradoodle by Graevehart, in solid Walnut Picture Frame. 30cm x 30cm",
+        "price": 52.99,
+        "category": 2,
+        "image_url": " ",
+        "image": "aw2.jpg"
+      }
+    },
+    {
+      "pk": 3,
+      "model": "products.product",
+      "fields": {
+        "sku": "aw5001730010",
+        "name": "Steampunk Badger in Oak Frame",
+        "description": "Steampunk Badger by Graevehart, in old oak picture frame. 30cm x 30cm",
+        "price": 49.99,
+        "category": 1,
+        "image_url": " ",
+        "image": "aw3.jpg"
+      }
+    },
+    {
+      "pk": 4,
+      "model": "products.product",
+      "fields": {
+        "sku": "aw5001890157",
+        "name": "Steampunk Badger in Walnut Frame",
+        "description": "Steampunk Badger by Graevehart, in solid walnut frame. 30cm x 30cm",
+        "price": 52.99,
+        "category": 2,
+        "image_url": " ",
+        "image": "aw4.jpg"
+      }
+    },
+    {
+      "pk": 5,
+      "model": "products.product",
+      "fields": {
+        "sku": "aw5002111605",
+        "name": "Steampunk Cat in Oak Frame",
+        "description": "Steampunk Cat by Graevehart, in solid oak frame. 30cm x 30cm",
+        "price": 49.99,
+        "category": 1,
+        "image_url": " ",
+        "image": "aw5.jpg"
+      }
+    },
+    {
+      "pk": 6,
+      "model": "products.product",
+      "fields": {
+        "sku": "aw5002260206",
+        "name": "Steampunk Cat in Walnut Frame",
+        "description": "Steampunk Cat by Graevehart, in solid walnut frame. 30cm x 30cm",
+        "price": 52.99,
+        "category": 2,
+        "image_url": " ",
+        "image": "aw6.jpg"
+      }
+    },
+    {
+      "pk": 7,
+      "model": "products.product",
+      "fields": {
+        "sku": "aw5002440521",
+        "name": "Steampunk Dog in Oak Frame",
+        "description": "Steampunk Dog by Graevehart, in solid oak frame. 30cm x 30cm",
+        "price": 49.99,
+        "category": 1,
+        "image_url": " ",
+        "image": "aw7.jpg"
+      }
+    },
+    {
+      "pk": 8,
+      "model": "products.product",
+      "fields": {
+        "sku": "aw5002601115",
+        "name": "Steampunk Dog in Walnut Frame",
+        "description": "Steampunk Dog by Graevehart, in solid walnut frame. 30cm x 30cm",
+        "price": 52.99,
+        "category": 2,
+        "image_url": " ",
+        "image": "aw8.jpg"
+      }
+    },
+    {
+      "pk": 9,
+      "model": "products.product",
+      "fields": {
+        "sku": "aw5002690715",
+        "name": "Steampunk Fox in Oak Frame",
+        "description": "Steampunk Fox by Graevehart in solid oak frame. 30cm x 30cm",
+        "price": 49.99,
+        "category": 1,
+        "image_url": "",
+        "image": "aw9.jpg"
+      }
+    },
+    {
+      "pk": 10,
+      "model": "products.product",
+      "fields": {
+        "sku": "aw5002701115",
+        "name": "Steampunk Fox in Walnut Frame",
+        "description": "Steampunk Fox by Gravehart in solid walnut frame. 30cm x 30cm",
+        "price": 52.99,
+        "category": 2,
+        "image_url": " ",
+        "image": "aw10.jpg"
+      }
+    },
+    {
+      "pk": 11,
+      "model": "products.product",
+      "fields": {
+        "sku": "aw5002761055",
+        "name": "Steampunk Hare in Oak Frame",
+        "description": "Steampunk Hare by Graevehart in sold oak frame. 30cm x 30cm",
+        "price": 49.99,
+        "category": 1,
+        "image_url": " ",
+        "image": "aw11.jpg"
+      }
+    },
+    {
+      "pk": 12,
+      "model": "products.product",
+      "fields": {
+        "sku": "aw5002820069",
+        "name": "Steampunk Hare in Walnut Frame",
+        "description": "Steampunk Hare by Gravehart. In solid walnut frame. 30cm x 30cm",
+        "price": 52.99,
+        "category": 2,
+        "image_url": " ",
+        "image": "aw12.jpg"
+      }
+    },
+    {
+      "pk": 13,
+      "model": "products.product",
+      "fields": {
+        "sku": "aw5002820147",
+        "name": "Steampunk Mouse in Oak Frame",
+        "description": "Steampunk Mouse by Graevehart in solid oak frame. 30cm x 30cm",
+        "price": 49.99,
+        "category": 1,
+        "image_url": " ",
+        "image": "aw13.jpg"
+      }
+    },
+    {
+      "pk": 14,
+      "model": "products.product",
+      "fields": {
+        "sku": "aw5002910572",
+        "name": "Steampunk Mouse in Walnut Frame",
+        "description": "Steampunk Mouse by Graevehart in solid oak frame. 30cm x 30cm",
+        "price": 49.99,
+        "category": 2,
+        "image_url": " ",
+        "image": "aw14.jpg"
+      }
+    },
+    {
+      "pk": 15,
+      "model": "products.product",
+      "fields": {
+        "sku": "aw5002990740",
+        "name": "Steampunk Animal Collection",
+        "description": "Steampunk Animal Collection by Graevehart. Presented in a black frame, featuring 9 different Steampunk Animal Prints. Frame 90cm x 90cm",
+        "price": 69.99,
+        "category": 3,
+        "image_url": " ",
+        "image": "aw15.jpg"
+      }
+    },
+    {
+      "pk": 16,
+      "model": "products.product",
+      "fields": {
+        "sku": "aw5003050248",
+        "name": "Steampunk Otter in Oak Frame",
+        "description": "Steampunk Otter by Graevehart in solid oak frame. 30cm x 30cm",
+        "price": 49.99,
+        "category": 1,
+        "image_url": " ",
+        "image": "aw16.jpg"
+      }
+    },
+    {
+      "pk": 17,
+      "model": "products.product",
+      "fields": {
+        "sku": "aw5003070787",
+        "name": "Steampunk Otter in Walnut Frame",
+        "description": "Steampunk Otter by Graevehart in solid walnut frame. 30cm x 30cm",
+        "price": 52.99,
+        "category": 2,
+        "image_url": " ",
+        "image": "aw17.jpg"
+      }
+    },
+    {
+      "pk": 18,
+      "model": "products.product",
+      "fields": {
+        "sku": "aw5003090182",
+        "name": "Steampunk Pheasant in Oak Frame",
+        "description": "Steampunk Pheasant by Graevehart in solid oak frame. 30cm x 30cm",
+        "price": 49.99,
+        "category": 1,
+        "image_url": " ",
+        "image": "aw18.jpg"
+      }
+    },
+    {
+      "pk": 19,
+      "model": "products.product",
+      "fields": {
+        "sku": "aw5003090186",
+        "name": "Steampunk Pheasant in Walnut Frame",
+        "description": "Steampunk Pheasant by Graevehart in solid walnut frame. 30cm x 30cm",
+        "price": 52.99,
+        "category": 2,
+        "image_url": " ",
+        "image": "aw19.jpg"
+      }
+    },
+    {
+      "pk": 20,
+      "model": "products.product",
+      "fields": {
+        "sku": "aw5003161326",
+        "name": "Steampunk Squirrel in Oak Frame",
+        "description": "Steampunk Squirrel by Graevehart in Oak Frame",
+        "price": 49.99,
+        "category": 1,
+        "image_url": " ",
+        "image": "aw20.jpg"
+      }
+    },
+    {
+      "pk": 21,
+      "model": "products.product",
+      "fields": {
+        "sku": "aw5003230723",
+        "name": "Steampunk Squirrel in Walnut Frame",
+        "description": "Steampunk Squirrel by Graevehart in solid walnut frame. 30cm x 30cm",
+        "price": 52.99,
+        "category": 2,
+        "image_url": " ",
+        "image": "aw21.jpg"
+      }
+     }
+     ]
