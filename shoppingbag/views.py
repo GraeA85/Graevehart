@@ -13,7 +13,7 @@ def view_shoppingbag(request):
 
 
 def add_to_shoppingbag(request, item_id):
-    """ Add a quantity of the specified product to the shopping shoppingbag """
+    """ Add a quantity of the specified product to the shopping shopping bag """
 
     product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -27,7 +27,7 @@ def add_to_shoppingbag(request, item_id):
         )
     else:
         shoppingbag[item_id] = quantity
-        messages.success(request, f'Added {product.name} to your shoppingbag')
+        messages.success(request, f'Added {product.name} to your shopping bag')
 
     request.session['shoppingbag'] = shoppingbag
     return redirect(redirect_url)
@@ -44,13 +44,13 @@ def adjust_shoppingbag(request, item_id):
         shoppingbag = request.session.get('shoppingbag', {})
         shoppingbag[item_id] = int(quantity)
         messages.success(
-            request, f'Changed quantity of {product.name} in your shoppingbag')
+            request, f'Changed quantity of {product.name} in your shopping bag')
     else:
         shoppingbag = request.session.get('shoppingbag', {})
         shoppingbag.pop(item_id, None)
-        messages.success(request, f'Removed {product.name} from your shoppingbag')
+        messages.success(request, f'Removed {product.name} from your shopping bag')
 
-    request.session['shoppingbag'] = shoppingbag
+    request.session['shopping bag'] = shoppingbag
     return redirect(reverse('view_shoppingbag'))
 
 
@@ -61,7 +61,7 @@ def remove_from_shoppingbag(request, item_id):
         product = get_object_or_404(Product, pk=item_id)
         shoppingbag = request.session.get('shoppingbag', {})
         shoppingbag.pop(item_id)
-        messages.success(request, f'Removed {product.name} from your shoppingbag')
+        messages.success(request, f'Removed {product.name} from your shopping bag')
 
         request.session['shoppingbag'] = shoppingbag
         return HttpResponse(status=200)
