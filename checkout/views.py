@@ -30,24 +30,30 @@ def checkout(request):
         }
         order_form = OrderForm(form_data)
         if order_form.is_valid():
-            order = order_form.save(commit=False)
-            pid = request.POST.get('client_secret').split('_secret')[0]
-            order.stripe_pid = pid
-            order.original_shoppingbag = json.dumps(shoppingbag)
-            order.save()
+            order = order_form.save()
             for item_id, item_data in shoppingbag.items():
                 try:
                     product = Product.objects.get(id=item_id)
-                    order_line_item = OrderLineItem(
-                        order=order,
-                        product=product,
-                        quantity=item_data,
-                    )
-                    order_line_item.save()
+                    if isinstance(item_data, int):
+                        order_line_item = OrderLineItem(
+                            order=order,
+                            product=product,
+                            quantity=item_data,
+                        )
+                        order_line_item.save()
+                    else:
+                        for size, quantity in item_data['items_by_size'].items():
+                            order_line_item = OrderLineItem(
+                                order=order,
+                                product=product,
+                                quantity=quantity,
+                                product_size=size,
+                            )
+                            order_line_item.save()
                 except Product.DoesNotExist:
                     messages.error(request, (
-                        "One of the products in your shopping bag wasn't found in our "
-                        "database. Please call us for assistance!")
+                        "One of the products in your shoppingbag wasn't found in our database. "
+                        "Please call us for assistance!")
                     )
                     order.delete()
                     return redirect(reverse('view_shoppingbag'))
@@ -60,7 +66,7 @@ def checkout(request):
     else:
         shoppingbag = request.session.get('shoppingbag', {})
         if not shoppingbag:
-            messages.error(request, "There's nothing in your shopping bag at the moment")
+            messages.error(request, "There's nothing in your shoppingbag at the moment")
             return redirect(reverse('products'))
 
         current_shoppingbag = shoppingbag_contents(request)
