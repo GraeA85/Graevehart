@@ -13,7 +13,8 @@ def view_shoppingbag(request):
 
 
 def add_to_shoppingbag(request, item_id):
-    """ Add a quantity of the specified product to the shopping shopping bag """
+    """ Add a quantity of the specified product to the
+    shopping shopping bag """
 
     product = Product.objects.get(pk=item_id)
     quantity = int(request.POST.get('quantity'))
@@ -23,7 +24,8 @@ def add_to_shoppingbag(request, item_id):
     if item_id in list(shoppingbag.keys()):
         shoppingbag[item_id] += quantity
         messages.success(
-            request, f'Updated {product.name} quantity to {shoppingbag[item_id]}'
+            request, f'Updated {product.name} quantity to \
+                 {shoppingbag[item_id]}'
         )
     else:
         shoppingbag[item_id] = quantity
