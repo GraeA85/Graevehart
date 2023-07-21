@@ -46,11 +46,13 @@ def adjust_shoppingbag(request, item_id):
         shoppingbag = request.session.get('shoppingbag', {})
         shoppingbag[item_id] = int(quantity)
         messages.success(
-            request, f'Changed quantity of {product.name} in your shopping bag')
+            request, f'Changed quantity of {product.name} in your shopping \
+            bag')
     else:
         shoppingbag = request.session.get('shoppingbag', {})
         shoppingbag.pop(item_id, None)
-        messages.success(request, f'Removed {product.name} from your shopping bag')
+        messages.success(request, f'Removed {product.name} from your shopping \
+             bag')
 
     request.session['shopping bag'] = shoppingbag
     return redirect(reverse('view_shoppingbag'))
@@ -63,7 +65,8 @@ def remove_from_shoppingbag(request, item_id):
         product = get_object_or_404(Product, pk=item_id)
         shoppingbag = request.session.get('shoppingbag', {})
         shoppingbag.pop(item_id)
-        messages.success(request, f'Removed {product.name} from your shopping bag')
+        messages.success(request, f'Removed {product.name} from your shopping \
+            bag')
 
         request.session['shoppingbag'] = shoppingbag
         return HttpResponse(status=200)
