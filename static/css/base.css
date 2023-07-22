@@ -43,6 +43,10 @@ body {
     width: fit-content;
 }
 
+#clearance-text {
+    text-align: center;
+}
+
 .shop-now-button {
     background: black;
     color: white;
