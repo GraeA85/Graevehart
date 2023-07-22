@@ -19,9 +19,8 @@ body {
     width: 1.5rem;
 }
 
-.display-4 {
+.logo-font {
     text-transform: uppercase;
-    text-align: center;
 }
 
 .outline {
