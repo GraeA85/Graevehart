@@ -140,3 +140,9 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, 'Product deleted!')
     return redirect(reverse('products'))
+
+
+def clearance(request):
+    """ A view to return the index page """
+
+    return render(request, 'products/clearance.html')
