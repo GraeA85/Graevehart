@@ -31,9 +31,9 @@ body {
     text-transform: uppercase;
  }
 
-.my-0 {
+ #graevehart-logo {
     color:#ffc107 !important;
-}
+ }
 
 .outline {
     text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
