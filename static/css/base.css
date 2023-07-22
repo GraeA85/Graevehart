@@ -19,11 +19,13 @@ body {
     width: 1.5rem;
 }
 
-.logo-font {
+.display-4 {
     text-transform: uppercase;
-    background: aliceblue;
-    color: black;
     text-align: center;
+}
+
+.outline {
+    text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
 }
 
 .main-logo-link {
