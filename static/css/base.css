@@ -49,6 +49,10 @@ body {
     min-width: 260px;
 }
 
+#del-banner {
+    padding-left: 0;
+}
+
 .btn-black {
     background: black;
     color: white;
