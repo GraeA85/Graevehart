@@ -19,8 +19,17 @@ body {
     width: 1.5rem;
 }
 
+.my-1 {
+    background-color: #000;
+    margin-top: 0;
+    width: 100vw;
+    padding-left: 0; !important
+
+}
+
 .logo-font {
     text-transform: uppercase;
+    color:#ffc107 !important;
 }
 
 .outline {
