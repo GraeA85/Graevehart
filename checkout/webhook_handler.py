@@ -134,22 +134,13 @@ class StripeWH_Handler:
                             quantity=item_data,
                         )
                         order_line_item.save()
-                    else:
-                        for size, quantity in item_data['items_by_size'].items():  # noqa
-                            order_line_item = OrderLineItem(
-                                order=order,
-                                product=product,
-                                quantity=quantity,
-                                product_size=size,
-                            )
-                            order_line_item.save()
             except Exception as e:
                 if order:
                     order.delete()
                 return HttpResponse(
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
-        self._send_confirmation_email(order)     
+        self._send_confirmation_email(order)
         return HttpResponse(
             content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',  # noqa
             status=200)
