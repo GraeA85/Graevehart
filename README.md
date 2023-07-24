@@ -236,7 +236,7 @@ Mobile
 
 Desktop
 
-![Desktop Checkout Success Wireframe](static/images/readme/wireframes/wire_commission_success.jpg)
+![Desktop Checkout Success Wireframe](static/images/readme/wireframes/wire_checkout_success.jpg)
 
 Mobile
 
