@@ -4,7 +4,7 @@
 
 This website has been created to sell digital art prints for all Steampunk fans. It has been designed with a range of different screen sizes in mind so users can make a purchase on a phone/tablet/PC.
 
-!["Am I Responsive" image](static/images/readme/amiresponsive.jpg)
+!["Am I Responsive" image](static/images/readme/amiresponsivegraevehart.jpg)
 
 [View the live project here](https://graevehart-8728b4cc664b.herokuapp.com/)
 
