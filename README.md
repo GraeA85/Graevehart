@@ -771,11 +771,12 @@ Other errors included no blank lines at the bottom of the python files, these we
 
 Lighthouse in Google Dev Tools was used to check performance, accessibility, best practices and search engine optimisation.
 
-The Graevehart Digital Art shop webpage scored high results throughout the webiste. The only issue was with the performance, 
+The Graevehart Digital Art shop webpage scored high results throughout the website for accessibility, best practices and search engine optimisation. The only issue was with the performance, all image files were compressed to load quicker, however due to the
+quality of the files and art being the main product on the page, I did not want to suffer quality issues. Therefore performance score is quite low on the pages containing large amount of image files. The loading speed does not suffer too much from this however.
 
 ### **Manual Testing**
 
-To fully test my website, I used Google Chrome Developer Tools to ensure that the pages were responsive enough on all available screen sizes. Testing was performed on a variety of browsers (Chrome, Microsoft Edge, and Firefox) and devices (Gigabyte gaming laptop, iPhone SE, Android one+ 9 mobile, Fair Phone).
+To fully test my website, I used Google Chrome Developer Tools to ensure that the pages were responsive enough on all available screen sizes. Testing was performed on a variety of browsers (Microsoft Edge and Firefox) and devices (Microsoft Surface, Nothing Phone 1 and OnePlus Phone).
 
 <br/>
 
@@ -821,15 +822,6 @@ To fully test my website, I used Google Chrome Developer Tools to ensure that th
 | User data is added and persists over time, including order history, commissions and wishlist. | Added multiple users with different data and checked that throughout logging in and out, and over the course of weeks, the data remained the same | Passed |
 | User is linked to their order history, wishlist, and commission data | I made multiple user accounts with different data, and all users can see their own data | Passed |
 | User data can be edited and deleted from the database. | I tested that when deleting a user and then reestablishing them, none of their previous data is visible in their account. I also edited data such as user delivery details, and deleted items off the wishlist | Passed |
-| Calculations in the models to automatically assign variables to work as expected. | All calculations the model made were independently verified by manipulating the data and checking the results. This focused mostly on sales | Passed |
-
-<br/>
-
-#### **Sale Function**
-
-| Expected | Test Performed | Result |
-| :---:    |    :----:      | :---:  |
-| If the user is looking at a product that is on sale, and the product is then taken off sale if the user adds it to their cart without refreshing the page, the product will revert to the original price. | Opened the product detail page of a sale item. Took the item off sale. Without refreshing the product detail page, I added the item to my cart. Doing this showed that the item had reverted to its pre-sale price. | Passed |
 
 <br/>
 
@@ -839,18 +831,8 @@ To fully test my website, I used Google Chrome Developer Tools to ensure that th
 | :---:    |    :----:      | :---:  |
 | Adding, editing, and removing products from the bag work as expected.  | I added, edited and removed products from the bag | Passed |
 | Users’ correct details auto-fill in the checkout form. | Checked that the same details from the user’s profile are the ones that are auto filling the checkout form. I also checked that editing these details will change those on the form. | Passed |
-| Stripe payment goes through without any problems. | I made several orders, which all went through fine. I then checked the Stripe dashboard to make sure it was going through on that side too | Passed |
+| Stripe payment goes through without any problems. | I made several orders, which all went through fine. I then checked the Stripe dashboard webhooks and the three parts to the order submission process all worked sucessfully.| Passed |
 | The webhook is works so that if the user were to lose connection or close their browser before the transaction completes, the order still goes through, and they are automatically emailed. | I submitted the checkout form but closed the tab before it finished loading. The user still got charged, sent an automatic email, and the order was logged on the system and in their order history | Passed |
-
-<br/>
-
-#### **Wishlist**
-
-| Expected | Test Performed | Result |
-| :---:    |    :----:      | :---:  |
-| Adding and removing products from the wishlist work as expected. | I tested in different user accounts that I could add and remove products from the wishlist | Passed |
-| The email is sent as expected when a user’s wished-for item goes on sale.  | I tested on several user accounts with several different items by adding an item to users wish lists, checking some of their consent boxes, and seeing if only those who consented got an email for the item that just went on sale, if it was in their wishlist | Passed |
-| The user can control whether the above happens by turning their consent on or off on their wishlist page. | This was tested for in the test above | Passed |
 
 <br/>
 
@@ -861,16 +843,6 @@ To fully test my website, I used Google Chrome Developer Tools to ensure that th
 | The sorting and filtering functions work appropriately. | I clicked on each sort and filter function and check to see if they displayed the right products and, in the order, expected | Passed |
 | They can be added from the product management page. | I created several products using the management page, and checked to see that they showed up in the admin and on the website in the appropriate places. | Passed |
 | They can be edited or deleted by logged-in superusers from the products or product detail pages. | I edited and deleted several products as a superuser in both the 'all products' and 'product detail' pages | Passed |
-
-<br/>
-
-#### **Commissions**
-
-| Expected | Test Performed | Result |
-| :---:    |    :----:      | :---:  |
-| They can be added to the database via the commission’s form. | I submitted many commission forms, which then displayed on both the admin page and the user's 'my commissions' page | Passed`` |
-| They appear on the 'My Commissions' page, in order of when they were added, with the recently added being at the top. | I added several commissions to a few different users, and all of them had their commissions appear in the correct order | Passed |
-| The admin can change the status on the Django admin page, which will change the status on the 'My Commissions' page. | I changed the status on the admin page for several commissions, and each showed this change on the users 'My Commissions' pages. | Passed |
 
 <br/>
 
@@ -958,7 +930,7 @@ Thanks are given for the following posts and tutorials:
 
 ### **Content**
 
-Content for the website was made by Rossanne Hamilton.
+Content for the website was made by myself.
 
 <br/>
 
