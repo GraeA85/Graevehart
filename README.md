@@ -392,18 +392,7 @@ The Product Detail page has the following features:
    ![Add to Bag Button](static/images/readme/add.jpg)
 
    </details>
-   <br>
-
-   <details>
-   <summary>A button that will add the product to the logged-in user’s wishlist. This button is only shown if the user is logged in.</summary>
-
-   ![Add to Wishlist Button](static/images/readme/add_wishlist.jpg)
-   
-   </details>
-   <br>
-
-<br/>
-
+  
 ### **Product Management** 
 
    <details>
