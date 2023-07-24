@@ -811,7 +811,7 @@ To fully test my website, I used Google Chrome Developer Tools to ensure that th
 | Expected | Test Performed | Result |
 | :---:    |    :----:      | :---:  |
 | Non-logged-in users cannot see or access the parts of the site that are off-limits to them, and vice versa. | I logged in and out and, on both occasions, I checked to see what options were available to the user | Passed |
-| Users cannot view confidential information about other users, such as user account details, wish lists, carts, or commissions. |    I logged in as different users with different wish lists and commission requests, to check if either user could see the details of the other | Passed |
+| Users cannot view confidential information about other users, such as user account details or order history. |    I logged in as different users with different credentials saved on their accounts, to check if either user could see the details of the other | Passed |
 
 <br/>
 
@@ -820,7 +820,7 @@ To fully test my website, I used Google Chrome Developer Tools to ensure that th
 | Expected | Test Performed | Result |
 | :---:    |    :----:      | :---:  |
 | User data is added and persists over time, including order history, commissions and wishlist. | Added multiple users with different data and checked that throughout logging in and out, and over the course of weeks, the data remained the same | Passed |
-| User is linked to their order history, wishlist, and commission data | I made multiple user accounts with different data, and all users can see their own data | Passed |
+| User is linked to their order history and personal data | I made multiple user accounts with different data, and all users can see their own data | Passed |
 | User data can be edited and deleted from the database. | I tested that when deleting a user and then reestablishing them, none of their previous data is visible in their account. I also edited data such as user delivery details, and deleted items off the wishlist | Passed |
 
 <br/>
@@ -850,7 +850,7 @@ To fully test my website, I used Google Chrome Developer Tools to ensure that th
 
 | Expected | Test Performed | Result |
 | :---:    |    :----:      | :---:  |
-| The search function works as expected. | I searched for a wide variety of artwork based on various parts of their products pages, and this worked as expected. | Passed |
+| The search function works as expected. | I searched for a wide variety of artwork based on various parts of their products pages (category, product name for e.g.), and this worked as expected. | Passed |
 
 <br/>
 
@@ -867,7 +867,7 @@ To fully test my website, I used Google Chrome Developer Tools to ensure that th
 
 | User | Device | Problem | Screenshot |
 | :---:        |    :----:          |        :----:    | :---:     |
-| MI | Fair Phone | Can't see the number in the quantity box in the design page | [MI Screenshot](static/images/readme/no_quantity_number.png) |
+| MI | Fair Phone |  | [MI Screenshot](static/images/readme/no_quantity_number.png) |
 | CM | Android 1+9 | Price of product is not shown in the order confirmation page | [CM Screenshot 1](static/images/readme/cm_no_price.png) |
 | CM | Android 1+9 | In checkout cart, the plus box wraps | [CM Screenshot 2](static/images/readme/cm_plus_wrap.png) |
 | SHM | MacBook Air 2017 | Padding is needed on the 'verify email' page | [SHM Screenshot 1](static/images/readme/shm_padding.png) |
@@ -879,17 +879,8 @@ To fully test my website, I used Google Chrome Developer Tools to ensure that th
 
 | Bug Number  | Expected behaviour | Actual behaviour | Solution |
 | ---:        |    :----:          |        :----:    | :---     |
-| 1       |  When clicking on the On Sale dropdown under All Products in the nav bar, the user sees everything on sale   |  When clicking on the On Sale dropdown under All Products in the nav bar, the user sees all products, not just those on sale  | The model has a property called on_sale that determines the Boolean value of on_sale in the Product model. This calculates if an item is on sale based on whether the admin enters a discount or not. So instead of looking for on_sale=True, the code looks for on_sale being greater than 0. So, I changed the all_product view section to "if 'on_sale' in request.GET: products = products.filter(discount__gt=0)" |
-| 2       | Commissions shown on the my_commissions page should only be those of the user  | Currently showing every user's commission  | Change part of the my_commissions view code from this -> commissions = Commission.objects.all(), to this -> commissions = Commission.objects.filter(user=request.user) |
-| 3 | When marking the discount percentage or a product as '0' in admin, the user should be able to turn off the sale |        Marking the discount percentage as '0' returned a form error, requesting the user enter a discount percentage | Added the discount condition to the Product model |
-| 4 | When checking out, after submitting the form, the form should go through, user payment to be processed by Stripe, and the user is sent an automatic email confirmation | When checking out, after submitting the form, the user gets the error - "AttributeError at /checkout/ 'Product' object has no attribute 'price'" | This was because the checkout model save function was not updated when product.price was changed to product.sell_price in the Product model. |
-| 5 | When asking to sort products by price in the navigation bar, products should then be sorted by price | Instead the page would not render and threw the error "Cannot resolve keyword 'sell_price' into field." | This issue arose because the field 'sell_price' was not defined in the Product model as a database field, but rather as a property with a getter method |
-| 6 | When asking to sort products by price in the dropdown bar, products should then be sorted by price | Instead the page would not render and threw the error "FieldError at /products/ Cannot resolve keyword 'sell' into field. Choices are: category, category_id, description, discount_percentage, id, image, image_url, imperial, metric, name, og_price, on_sale_end, on_sale_start, orderlineitem, orientation, orig_url, original_artist, product_wishlists, sell_price, sku, style, type, users_wishlist, wishlistitem, year" | This issue arose because the sort key used had an underscore in it. Fixing the view to remove this made the page render again, and the sorting function now works. |
-| 7 | User can add product via add_product page. | Instead, on form submission, this error is displayed - "TypeError at /products/add/ unsupported operand type(s) for *: 'decimal.Decimal' and 'NoneType'" | This was because I had removed the discount_percentage field, which made the sell_price incalculable. |
-| 8 | The Heroku-hosted page renders when visited | The page does not render and shows this error - "SuspiciousOperation at / Attempted access to '/images/logo.webp' denied." | I changed the file path to correct this |
-| 9 | When a user clicks on "My Wishlist", it would take them to a rendered page | If a user tried to access their wishlist when they have no wishlist items, the page does not render, and shows the error "NoReverseMatch at /wishlist/. Reverse for 'sale_alert_consent' with arguments '('',)' not found. 1 pattern(s) tried: ['wishlist/sale_alert_consent/(?P<user_id>[0-9]+)/\\Z']". | This happens before a user puts anything on their wishlist and does not happen if they have put something on their wishlist and then take it off again. This happened because sale_alert_consent is necessary for the wishlist view, but this was not set before the user put something in their wishlist. To fix this, I added in the show_wishlist view that a wishlist should be made if the user does not have one already, and that the user's sale_alert_consent should be set to false. A belt and braces approach, since creating the wishlist should mean that this field is automatically set to false. |
-| 10 | When manually adding the sale start and end date in the admin, no error should occur | Instead, it throws a validation error and requests that the user enter the discount percentage, even though there is one already there  | The code in the product model was wrong. This has now been fixed. |
-| 11 | When registering as a new user, the form should validate, and take the user to the 'confirm email' page | When submitting the signup form, the user sees "Forbidden (403) CSRF verification failed. Request aborted" | Changing the development variable in the github environment to be exclusive to this project, and turning both this variable and the one in Heroku to False, seemed to fix this bug. |
+| 1       |  No verification email was being recieved when the user signed up for a new account. This was due to 
+a setting issue in the main app settings.py file. This was changed to mandatory and verification emails were again recieved by the user.
 | 12 | On the product detail page, if the user deletes the product quantity value, and then click "add to bag", a validation warning should pop up to say that they need to enter a value. | Instead, the user sees a "server 500" error | I added 'required' to the input boxes, and adjusted the views so that it didn't assume there was an integer value |
 
 <br/>
