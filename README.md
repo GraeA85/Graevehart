@@ -406,30 +406,6 @@ The Product Detail page has the following features:
 
 <br/>
 
-### **Commissions**
-
-   <details>
-   <summary>The Commissions page has a form that the user can fill in to request a commission.</summary>
-
-   ![Commission Form](static/images/readme/commission.jpg)
-   
-   </details>
-   <br>
-
-<br>
-
-### **Commission Success**
-
-   <details>
-   <summary>This page is shown when the user successfully submits a commission form. It includes links to their commission page, their wishlist, and the all-products page. It should be noted that the commission form is only available to logged-in users. </summary>
-
-   ![Commission Success Message](static/images/readme/commission_success.jpg)
-   
-   </details>
-   <br>
-
-<br/>
-
 ### **Product Management** 
 
    <details>
@@ -455,88 +431,9 @@ The My Profile page has the following features:
    <br>
 
    <details>
-   <summary>A button that takes the user to their wishlist.</summary>
-
-   ![View Wishlist Button](static/images/readme/view_wishlist.jpg)
-   
-   </details>
-   <br>
-
-   <details>
-   <summary>A button that takes the user to their commissions.</summary>
-
-   ![View Commissions Button](static/images/readme/view_commissions.jpg)
-   
-   </details>
-   <br>
-
-   <details>
    <summary>A section that shows the user their order history.</summary>
 
    ![Order History](static/images/readme/order_history.jpg)
-   
-   </details>
-   <br>
-
-<br/>
-
-### **Wishlist**
-
-The Wishlist page has the following features:
-
-   <br>
-
-   <details>
-   <summary>A section that tells the user how many items they have on their wishlist.</summary>
-
-   ![Wishlist Amount](static/images/readme/wishlist_amount.jpg)
-   
-   </details>
-   <br>
-
-   <details>
-   <summary>A small form the user can submit consent to be automatically emailed when one of their wished-for items goes on sale. This changes to remove consent as an option if they have given consent previously.</summary>
-
-   ![With no sale consent](static/images/readme/sale_consent_off.jpg)
-   ![With sale consent](static/images/readme/sale_consent_on.jpg)
-   
-   </details>
-   <br>
-
-   <details>
-   <summary>A list of wishlist items that the user has saved. Each item is clickable and takes the user to the specific product detail page.</summary>
-
-   ![Wishlist Items](static/images/readme/wishlist_items.jpg)
-   
-   </details>
-   <br>
-
-   <details>
-   <summary>A button underneath each item, allowing the user to remove it from their wishlist.</summary>
-
-   ![Remove From Wishlist Button](static/images/readme/remove_wishlist.jpg)
-   
-   </details>
-   <br>
-
-<br/>
-
-### **My Commissions**
-
-The My Commissions page has the following features:
-
-   <details>
-   <summary>A section that shows the user how many pieces of art they have commissioned.</summary>
-
-   ![Commission Amount](static/images/readme/commission_amount.png)
-   
-   </details>
-   <br>
-
-   <details>
-   <summary>Each commission the user has requested has its own section. This includes a status that can be updated by the administrator on the Django Admin page to let the user know where they are in the commission process. These are ordered by the most recent date.</summary>
-
-   ![User's Commissions](static/images/readme/commissions.jpg)
    
    </details>
    <br>
@@ -703,52 +600,13 @@ Many messages are included to alert the user that they have accomplished an acti
    </details>
    <br>
 
-   <details>
-   <summary>Adding an item to their wishlist.</summary>
-   
-   ![Add to wishlist toast](static/images/readme/add_wishlist_toast.jpg)
-   
-   </details>
-   <br>
-
-   <details>
-   <summary>Removing an item from their wishlist.</summary>
-   
-   ![Remove from wishlist toast](static/images/readme/remove_wishlist_toast.jpg)
-   
-   </details>
-   <br>
-
-   <details>
-   <summary>Updating their consent preferences for being emailed when an item on their wishlist goes on sale.</summary>
-   
-   ![Update Preferences](static/images/readme/preferences.jpg)
-   
-   </details>
-   <br>
-
-<br/>
-
-### **Product Model**
-
-The discounted price of a product is automatically calculated based on the user’s input on the admin page. When the user inputs the discount percentage, this:
-
-* Changes the selling price of the product, based on the percentage added
-* Changes the 'on sale' variable to 'True', which in turn changes the HTML in the product and product detail pages
-* If the user neglects to enter a sale start and end date, these are automatically added. The sale start date in this case will be the current date, and the end sale date will be a week from the current date.
-* If the user adds dates but no discount, they are shown a customised validation error explaining this
-* If the user adds a sale end date that is earlier than the start sale date, they are shown a customised validation error
-* If the user ends the sale early by changing the discount percentage to zero without changing the sale start and end dates, the dates are automatically removed
-* When the sale ends, the dates are automatically removed, as is the discount. Therefore, resetting the product to the original price and setting 'on sale' to False
-
-<br/>
+   <br/>
 
 ### **Future Features**
 
 * The commission form to automatically fill in the name and email of the logged-in user
 * The checkout form to show and automatically fill in the name of the logged-in user
-* Improve the responsiveness of a few of the pages in the mobile view 
-* Email to be a real email, not just be printed in the terminal
+* Improve the responsiveness of a few of the pages in the mobile view
 
 ---
 
@@ -760,7 +618,7 @@ I have been mindful during coding to ensure that the website is as accessible as
 
 * Using semantic HTML.
 * Using descriptive alt attributes on images on the site.
-* Supplying information for screen readers where there are icons used and no text, such as footer icons.
+* Aria labels - providing information for screen readers where there are icons used and no text, such as footer icons.
 * Guaranteeing adequate colour contrast throughout the site.
 
 ---
@@ -778,10 +636,10 @@ HTML5, CSS3, Python, and JavaScript were used to create this website.
 
 ### **Frameworks, Libraries & Programs Used**
 
-* [Google Fonts](https://fonts.google.com/) was used to import Big Shoulders Text.
+* [Google Fonts](https://fonts.google.com/) was used to import the font used throughout the website.
 * [Git](https://git-scm.com/) was used for version control by using the Gitpod terminal to commit to Git and Push to GitHub.
 * [GitHub](https://github.com/) was used to store the projects' code, and to handle version control.
-* [Paint.Net](https://www.getpaint.net/download.html) was used to edit and crop images.
+* [Photopea](https://www.photopea.com) was used to edit and crop images.
 * [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) was used to troubleshoot and test features and solve issues with responsiveness and styling.
 * [Am I Responsive?](https://ui.dev/amiresponsive) was used to show the website on a range of devices.
 * [Unicorn Revealer](https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln?hl=en-GB) was used for debugging.
@@ -789,19 +647,11 @@ HTML5, CSS3, Python, and JavaScript were used to create this website.
 * [Psycopg2](https://www.psycopg.org/docs/) was used to connect Python code with the database. 
 * [Django](https://www.djangoproject.com/) is a high-level Python web framework.
 * [Bootstrap](https://getbootstrap.com/) was used for responsive and pre-designed CSS.
-* [PostgreSQL](https://www.postgresql.org/) was the object-relational database system used.
 * [ElephantSQL](https://www.elephantsql.com/) was used to host the database.
 * [Heroku](https://www.heroku.com/) was used to deploy the website.
-* [Dall-E 2](https://openai.com/product/dall-e-2) was used to create the artwork.
-* [AI Image Enlarger](https://imglarger.com/Enhancer) was used to tidy up the contrast etc. of the artwork.
-* [Flickr](https://www.flickr.com/) was used to host some of the images.
-* [Excel](https://www.microsoft.com/en-gb/microsoft-365/excel) was used to create CSV files.
-* [Convert CSV](https://www.convertcsv.com/csv-to-json.htm) was used to convert CSV files to JSON files.
+* [Bing Image Creator](https://www.bing.com/create) was used to create the artwork.
 * [Font Awesome](https://fontawesome.com/) was used for the icons.
-* [Lucid](https://lucid.app/) was used to map the models.
 * [Amazon Web Services](https://aws.amazon.com/) was used to host the images for the Heroku-hosted site.
-* [Batch Compress](https://batchcompress.com/en) was used to compressscompress image files.
-* [Bulk Resize Photos](https://bulkresizephotos.com/) was used to resize image files and put them in a different file format.
 * [RespImageLint](https://ausi.github.io/respimagelint/) was used to see how the images needed to be changed to optimise the page.
 * [Favicon Generator](https://favicon.io/favicon-converter/) was used to use convert my favicon design into something useable.
 
@@ -860,27 +710,6 @@ This project was deployed to Heroku using the following steps:
 ### **Local Deployment**
 
 <br/>
-
-#### **How to Fork**
-
-To fork the Eponymous Bosch repository:
-
-1) Login (or sign up) to GitHub.
-2) Go to the repository for this project, at [GitHub Repository](https://github.com/Lithill/Eponymous-Bosch).
-3) Click the Fork button in the top right corner.
-
-<br/>
-
-#### **How to Clone**
-
-To clone the Eponymous Bosch repository:
-
-1) Login (or sign up) to GitHub.
-2) Go to the repository for this project, at [GitHub Repository](https://github.com/Lithill/Eponymous-Bosch).
-3) Above the list of files, click "Code".
-4) Click "Open with GitHub Desktop" to clone and open the repository with GitHub Desktop.
-5) Click "Choose..." and, using Windows Explorer, navigate to a local path where you want to clone the repository.
-6) Click "Clone".
 
 ---
 
