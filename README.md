@@ -344,9 +344,6 @@ The Products page has the following features:
    ![Scroll Up](static/images/readme/scroll.jpg)
 
    </details>
-   <br>
-
-<br/>
 
 ### **Product Detail**
 
@@ -361,8 +358,9 @@ The Product Detail page has the following features:
    <br>
 
    <details>
-   <summary>Details page show information about the art piece, price and size of the framed product.</summary>
-
+   <summary>Details page showing information about the artpiece, price and size of the framed product.</summary>
+   </details>
+   <br>
    
    <details>
    <summary>If the user is a superuser, two links appear giving the user the ability to edit or delete the product.</summary>
