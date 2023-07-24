@@ -317,7 +317,7 @@ a.category-badge > span.badge:hover {
     }
 
     .shop-now-button {
-        min-width: 0px,
+        min-width: 0px !important;
     }
 
     .nav-link {
