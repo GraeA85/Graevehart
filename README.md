@@ -626,13 +626,11 @@ I have been mindful during coding to ensure that the website is as accessible as
 
 ## **Technologies Used**
 
-<br/>
 
 ### **Languages Used**
 
 HTML5, CSS3, Python, and JavaScript were used to create this website.
 
-<br/>
 
 ### **Frameworks, Libraries & Programs Used**
 
@@ -881,7 +879,6 @@ To fully test my website, I used Google Chrome Developer Tools to ensure that th
 | ---:        |    :----:          |        :----:    | :---     |
 | 1       |  No verification email was being recieved when the user signed up for a new account. This was due to 
 a setting issue in the main app settings.py file. This was changed to mandatory and verification emails were again recieved by the user.
-| 12 | On the product detail page, if the user deletes the product quantity value, and then click "add to bag", a validation warning should pop up to say that they need to enter a value. | Instead, the user sees a "server 500" error | I added 'required' to the input boxes, and adjusted the views so that it didn't assume there was an integer value |
 
 <br/>
 
@@ -896,55 +893,20 @@ There are no known bugs.
 
 Thanks are given for the following posts and tutorials:
 
-* ['Platform-based Programming's' Assignment Walkthrough](https://pbp-fasilkom-ui.github.io/ganjil-2023/en/assignments/tutorial/tutorial-1/) was used for the base code for setting up the wishlist.
-* ['Funda Web Of It's' tutorial on 'Insert data into database in Django'](https://www.fundaofwebit.com/django/insert-data-into-database-in-django#:~:text=To%20insert%20data%2C%20using%20forms,the%20classname%20as%20shown%20below.&text=Open%20the%20views.py%20file,given%20in%20the%20path%20above.&text=%23%20Create%20your%20views%20here.) was used to understand how to create a wishlist button to send the data to the database.
-* [Coding Ninja's 'Django Model Form' tutorial](https://www.codingninjas.com/codestudio/library/django-model-form) was used for the basis of the contact/commission form.
-* ['Geeks for Geeks' tutorial on 'Overriding the save method in Django models'](https://www.geeksforgeeks.org/overriding-the-save-method-django-models/) helped me understand how to create the save function in the product model for when products are on sale.
-* [Monkut's reply in Stack Overflow post about showing custom model validation exceptions in the Django admin site](https://stackoverflow.com/questions/2177720/showing-custom-model-validation-exceptions-in-the-django-admin-site) helped me understand how to raise validation exceptions for my product model when writing the sale functions.
-* [w3school's Django Queryset explanation](https://www.w3schools.com/django/django_queryset_get.php) helped me understand how .values_list() helps to return only certain data. This helped me write the wishlist auto-emailing function.
-* [Alasdair's post on Stack Overflow](https://stackoverflow.com/questions/37205793/django-values-list-vs-values) helped point me in the write direction of using flat=True on values_list(), so that I can loop the output.
-* [Arie's code on Stack Overflow](https://stackoverflow.com/questions/16277997/field-labels-crispy-forms-django) was used to edit the field names on the commission form.
-* [Bipul Jain](https://stackoverflow.com/questions/52107184/suspiciousoperation-when-loading-image-in-django) for explaining how to fix a SeriousOperation error.
 
 <br/>
 
 ### **Code Used**
 
 * [Code Institute's 'Boutique Ado' walkthrough](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/4201818c00aa4ba3a0dae243725f6e32/d3188bf68530497aa5fba55d07a9d7d7/) was used as the starting point for this project.
-* [Ajmal Aamir's](https://stackoverflow.com/questions/56580696/how-to-implement-add-to-wishlist-for-a-product-in-django) model code in this Stack Overflow post was used for the wishlist model.
-* [Harry Dhillon's Nourish and Lift](https://github.com/Harry-Leepz/Nourish-and-Lift/blob/main/wishlist/views.py) code was used for the wishlist.
-* [Mahammadhusain Kadiwala's](https://stackoverflow.com/questions/73813646/django-models-to-calculate-discount) code was used as a basis for the sale information in the product model.
-* [Timmy O'Mahony's](https://stackoverflow.com/questions/6195424/how-to-insert-a-checkbox-in-a-django-form) code was used and edited for the wishlist sales alert checkbox.
-* [w3school's](https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp) code was used to hide the arrows on the quantity input boxes.
 
 <br/>
 
 ### **Content**
 
-Content for the website was made by myself.
+All content for the website was made by me.
 
 <br/>
-
-### **Media Used**
-
-* [StockSnap's image](https://pixabay.com/photos/wall-picture-frame-display-interior-2558279/) on Pixabay was used for the background image of Starry Night and Water Lilies. 
-* [Uroburos's image](https://pixabay.com/photos/image-painting-art-gallery-painter-1053852/) on Pixabay was used for the background image of the Mona Lisa. 
-* [Uroburos's image](https://pixabay.com/photos/image-painting-piece-the-museum-1053849/) on Pixabay was used for the background image of The Scream. 
-* [Counselling's image](https://pixabay.com/photos/oil-painting-picture-frame-492639/) on Pixabay was used for the background image of Ophelia. 
-* [Romka's image](https://www.pexels.com/photo/a-single-gold-framed-painting-on-the-wall-2951525/) on Pexels was used for the background image of Dogs Playing Poker. 
-* [Google Font Oranienbaum](https://fonts.google.com/specimen/Oranienbaum?preview.text=METROPOLIS&preview.text_type=custom&category=Serif) was used for the font on the Metropolis poster. 
-* [Tim Mossholder's image](https://www.pexels.com/photo/white-and-black-strap-on-green-painted-wall-2096622/) on Pexels was used for the background image of Metropolis. 
-* [Google Font's Metal Mania](https://fonts.google.com/specimen/Metal+Mania?preview.text=JAWS&preview.size=96&preview.text_type=custom&query=metal+mania) was used for the font on Jaws. 
-* [Google Font's Piedra](https://fonts.google.com/specimen/Metal+Mania?preview.text=JAWS&preview.size=96&preview.text_type=custom&query=metal+mania) was used for the font on Hang in There. 
-* [Olga Lioncat's image](https://www.pexels.com/photo/palm-leaves-near-the-yellow-wall-7245622/) on Pexels was used for the background image of Hang in There. (The colour was heavily edited.)
-* [Cottonbro Studio's image](https://www.pexels.com/photo/man-in-white-crew-neck-shirt-4065136/) on Pexels was used for the background image of Le Chat Noir.
-* [SHVETS Production's image](https://www.pexels.com/photo/red-and-blue-curling-stones-in-close-up-photography-7561421/) on Pexels was used for the background image of Rosie the Riveter. (The colour was heavily edited.)
-* [Google Font's Dancing Script](https://fonts.google.com/specimen/Dancing+Script?category=Handwriting&preview.text=(eponymous)&preview.text_type=custom) was used for part of the logo's font. 
-* [Google Font's Big Shoulders Stencil Text](https://fonts.google.com/specimen/Big+Shoulders+Stencil+Text?category=Handwriting&preview.text=BoscH&preview.text_type=custom) was used for part of the logo's font. 
-* [Karolina Grabowska's image](https://www.pexels.com/photo/black-and-white-photo-frame-5978717/) on Pexels was used for the background image of Relativity. (The colour was edited.)
-* [Google Font's Big Shoulders Text](https://fonts.google.com/specimen/Big+Shoulders+Text?query=Patric+King) was used for the text body.
-* [9699186's image](https://pixabay.com/photos/frame-mockup-flatlay-plant-3681646/) on Pixabay was used for the background image of The Wounded Deer.
-* [Eva Bronzini's image](https://www.pexels.com/photo/photo-of-a-blank-picture-frame-7967320/) on Pixabay was used for the background image of The Lovers II.
 
 <br/>
 
@@ -952,7 +914,6 @@ Content for the website was made by myself.
 
 I would like to acknowledge the following people who helped me along the way in completing my fourth milestone project:
 
-- My mentor Mitko Bachvarov for helpful feedback and sharing links for further learning.
-- Chris Mugridge, Maya Irish, Skye Hillier-Milton, and Roman Rakic for user testing, encouragement, and feedback.
-- Thomas Muat for helping me understand how the on_sale filter works in the nav bar.
+- My family and friends for user testing the website on a variety of devices they had available.
+
 </div>
