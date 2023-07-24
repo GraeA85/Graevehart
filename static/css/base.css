@@ -43,10 +43,6 @@ body {
     width: fit-content;
 }
 
-#clearance-text {
-    text-align: center;
-}
-
 .shop-now-button {
     background: black;
     color: white;
@@ -310,8 +306,18 @@ a.category-badge > span.badge:hover {
       body {
           height: calc(100vh - 116px);
       }
-      .display-4.logo-font.text-black {
-        font-size: 2rem;
+     
+     #clearance-text {
+        text-align: center;
+        font-size:x-large
+    }
+
+    .h-100 {
+        margin-left: 50px;
+    }
+
+    .shop-now-button {
+        min-width: 0px,
     }
 
     .nav-link {
