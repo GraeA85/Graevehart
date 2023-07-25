@@ -821,7 +821,7 @@ The following tests were carried out by several people using several devices, ea
 
 | Expected behaviour | Actual behaviour | Solution |
 |    :----:          |        :----:    | :---     |
-|Verification email to be recieved by the user when registration process has been completed|No verification email was being recieved when the user signed up for a new account|This was due to a setting issue in the main app settings.py file. This was changed to mandatory and verification emails were again recieved by the user.
+|Verification email to be received by the user when registration process has been completed|No verification email was being received when the user signed up for a new account|This was due to a setting issue in the main app settings.py file. This was changed to mandatory and verification emails were again received by the user.
 
 <br/>
 
@@ -842,7 +842,7 @@ Stack overflow - For obscure answers during the coding process.
 
 ### **Code Used**
 
-* [Code Institute's 'Boutique Ado' walkthrough](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/4201818c00aa4ba3a0dae243725f6e32/d3188bf68530497aa5fba55d07a9d7d7/) was used as the starting point for this project.
+* [Code Institute's 'Boutique Ado' walkthrough](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSF_102+Q1_2020/courseware/4201818c00aa4ba3a0dae243725f6e32/d3188bf68530497aa5fba55d07a9d7d7/) was used as a template for this project - code taken from my own Boutique Ado "code-along" mini project and adapted where required to fit my user stories of my Graevehart Digital Designs Project.
 
 <br/>
 
