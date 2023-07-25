@@ -359,17 +359,12 @@ The Product Detail page has the following features:
 
    <details>
    <summary>Details page showing information about the artpiece, price and size of the framed product.</summary>
+
+   ![Product Details](static/images/readme/details.jpg)
+
    </details>
    <br>
    
-   <details>
-   <summary>If the user is a superuser, two links appear giving the user the ability to edit or delete the product.</summary>
-
-   ![Edit and Delete](static/images/readme/edit_delete_detail.jpg)
-
-   </details>
-   <br>
-
    <details>
    <summary>If the user would like more than one of the products, they can adjust the quantity.</summary>
 
@@ -393,6 +388,7 @@ The Product Detail page has the following features:
 
    </details>
   
+
 ### **Product Management** 
 
    <details>
@@ -823,10 +819,9 @@ The following tests were carried out by several people using several devices, ea
 
 ### **Solved Bugs**
 
-| Bug Number  | Expected behaviour | Actual behaviour | Solution |
-| ---:        |    :----:          |        :----:    | :---     |
-| 1       |Verification email to be recieved by the user when registration process has been completed|No verification email was being recieved when the user signed up for a new account|This was due to 
-a setting issue in the main app settings.py file. This was changed to mandatory and verification emails were again recieved by the user.
+| Expected behaviour | Actual behaviour | Solution |
+|    :----:          |        :----:    | :---     |
+|Verification email to be recieved by the user when registration process has been completed|No verification email was being recieved when the user signed up for a new account|This was due to a setting issue in the main app settings.py file. This was changed to mandatory and verification emails were again recieved by the user.
 
 <br/>
 
