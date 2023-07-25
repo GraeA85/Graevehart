@@ -57,10 +57,8 @@ Steampunk inspired art is a relatively new and modern branch of art which has be
 #### **Sorting and Setting**
 * Sort the list of available products.
 * Sort a specific category of product.
-* Sort multiple categories of products simultaneously.
 * Search for a product by name or description.
 * Easily see what I have searched for and the number of results.
-* Sort based on what is currently on sale (when a sale is active).
 
 <br/>
 
@@ -69,7 +67,7 @@ Steampunk inspired art is a relatively new and modern branch of art which has be
 * View items in my bag to be purchased.
 * Adjust the number of individual items in my bag.
 * Easily enter my payment information.
-* Feel my personal and payment information is safe and secure.
+* Ensure personal and payment information is safe and secure.
 * View an order confirmation after checkout.
 * Receive an email confirmation after checking out.
 
@@ -470,7 +468,7 @@ The My Profile page has the following features:
 
 <br/>
 
-### **Shopping Bag***
+### **Shopping Bag**
 
 The Shopping bag page has the following features:
 
@@ -591,9 +589,9 @@ Many messages are included to alert the user that they have accomplished an acti
 
 ### **Future Features**
 
-* The commission form to automatically fill in the name and email of the logged-in user
 * The checkout form to show and automatically fill in the name of the logged-in user
-* Improve the responsiveness of a few of the pages in the mobile view
+* Ability to run a sale on the website, caluclating discount for each item
+* Confirmation before deletion option, to prevent items been deleted by mistake. 
 
 ---
 
@@ -715,22 +713,7 @@ I tested the page and had 3 people also manually test it on their own devices. F
 
 The [W3C HTML Validator](https://validator.w3.org/) was used to validate the HTML on all pages of the website. 
 
-* Results from the [bag](static/images/readme/validation/html/bag.jpg) page check.
-* Results from the [checkout](static/images/readme/validation/html/checkout.jpg) page check.
-* Results from the [checkout success](static/images/readme/validation/html/checkout_success.jpg) page check.
-* Results from the [commission](static/images/readme/validation/html/commission.jpg) page check.
-* Results from the [commission success](static/images/readme/validation/html/commission_success.jpg) page check.
-* Results from the [my commission](static/images/readme/validation/html/my_commissions.jpg) page check.
-* Results from the [index](static/images/readme/validation/html/index.jpg) page check.
-* Results from the [products](static/images/readme/validation/html/products.jpg) page check.
-* Results from the [product detail](static/images/readme/validation/html/product_detail.jpg) page check.
-* Results from the [profile](static/images/readme/validation/html/my_profile.jpg) page check.
-* Results from the [sign up](static/images/readme/register.jpg) page check.
-* Results from the [log out](static/images/readme/validation/html/logout.jpg) page check.
-* Results from the [log in](templates/allauth/account/login.html) page check.
-* Results from the [email confirm](static/images/readme/validation/html/email_confirm.jpg) page check.
-* Results from the [wishlist](static/images/readme/validation/html/wishlist.jpg) page check.
-* Results from the [product management](static/images/readme/validation/html/product_management.jpg) page check.
+No HTML errors were found on the website.
 
 <br/>
 
@@ -738,9 +721,7 @@ The [W3C HTML Validator](https://validator.w3.org/) was used to validate the HTM
 
 The [W3C CSS Validator](https://jigsaw.w3.org/css-validator/) was used to validate the CSS.
 
-* Results from the [checkout](static/images/readme/validation/css/checkout_css.jpg) css.
-* Results from the [profile](static/images/readme/validation/css/profile_css.jpg) css.
-* Results from the [base](static/images/readme/validation/css/base.jpg) css.
+No CSS errors were found on the website.
 
 <br/>
 
@@ -761,7 +742,8 @@ quality of the files and art being the main product on the page, I did not want 
 
 ### **Manual Testing**
 
-To fully test my website, I used Google Chrome Developer Tools to ensure that the pages were responsive enough on all available screen sizes. Testing was performed on a variety of browsers (Microsoft Edge and Firefox) and devices (Microsoft Surface, Nothing Phone 1 and OnePlus Phone).
+To fully test my website, I used Google Chrome Developer Tools to ensure that the pages were responsive enough on all available screen sizes. Testing was performed on a variety of browsers (Microsoft Edge and Firefox) and devices (PC,Microsoft Surface, Nothing Phone 1, IPhone 12, Samsung S21 and OnePlus Phone).
+The following tests were carried out by several people using several devices, each asked to complete all tasks listed.
 
 <br/>
 
@@ -848,37 +830,26 @@ To fully test my website, I used Google Chrome Developer Tools to ensure that th
 
 <br/>
 
-### **User Testing**
-
-| User | Device | Problem | Screenshot |
-| :---:        |    :----:          |        :----:    | :---:     |
-| MI | Fair Phone |  | [MI Screenshot](static/images/readme/no_quantity_number.png) |
-| CM | Android 1+9 | Price of product is not shown in the order confirmation page | [CM Screenshot 1](static/images/readme/cm_no_price.png) |
-| CM | Android 1+9 | In checkout cart, the plus box wraps | [CM Screenshot 2](static/images/readme/cm_plus_wrap.png) |
-| SHM | MacBook Air 2017 | Padding is needed on the 'verify email' page | [SHM Screenshot 1](static/images/readme/shm_padding.png) |
-| SHM | MacBook Air 2017 | The automatic emails do not say Eponymous Bosch | [SHM Screenshot 2](static/images/readme/shm_email.png) |
-
-<br/>
-
 ### **Solved Bugs**
 
 | Bug Number  | Expected behaviour | Actual behaviour | Solution |
 | ---:        |    :----:          |        :----:    | :---     |
-| 1       |  No verification email was being recieved when the user signed up for a new account. This was due to 
+| 1       |Verification email to be recieved by the user when registration process has been completed|No verification email was being recieved when the user signed up for a new account|This was due to 
 a setting issue in the main app settings.py file. This was changed to mandatory and verification emails were again recieved by the user.
 
 <br/>
 
 ### **Known Bugs**
 
-There are no known bugs.
+There are no known bugs outstanding within the Graevehart Website.
 
 ---
 <br/>
 
 ## **Credits**
 
-Thanks are given for the following posts and tutorials:
+Slack - for answering many queries during the coding process.
+Stack overflow - For obscure answers during the coding process.
 
 
 <br/>
@@ -891,9 +862,7 @@ Thanks are given for the following posts and tutorials:
 
 ### **Content**
 
-All content for the website was made by me.
-
-<br/>
+All content used in the website was created by me, primarily using AI.
 
 <br/>
 
