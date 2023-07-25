@@ -87,7 +87,7 @@ Steampunk inspired art is a relatively new and modern branch of art which has be
 
 ### **Wireframes**
 
-The wireframes are mostly adapted versions of the Boutique Ado walkthrough.
+Wireframes for the website (please click arrows for images).
 
 <details>
 <summary>Index</summary>
@@ -247,7 +247,7 @@ Mobile
 
 ### **Colour Scheme**
 
-Due to the colourful nature of the artwork itself, a minimalist design and colour palette were used, so that it would not clash with any of the artwork displayed.
+As the artwork is the primary product of the website, I have chose to keep the product pages as clean as possible, therefore a minimalist design and colour palette were used. The main index.html has a striking design to draw interest to the webpage.
 
 <br/>
 
@@ -276,6 +276,8 @@ The website is made up of 12 pages:
 * Shopping Bag
 * Checkout
 * Checkout Success
+
+Previews of each part can be viewed by clicking the arrows below.
 
 <br/>
 
@@ -546,16 +548,13 @@ The Checkout success page has the following feature:
    </details>
    <br>
 
-   <details>
-   <summary>Links to three versions of the products page - all products/prints/posters, which themselves have dropdowns to further filter those pages. / A link to the commission’s page, which is only shown when the user is logged in.</summary>
-   
    ![Menu links](static/images/readme/menu_links.jpg)
    
    </details>
    <br>
 
    <details>
-   <summary>A drop-down menu for the user account. Which only shows 'log in' and 'register' if the user is not logged in, but shows 'product management', 'my profile', 'my wishlist', 'my commissions' and 'logout'.
+   <summary>A drop-down menu for the user account. Which only shows 'log in' and 'register' if the user is not logged in, but shows 'product management' (if superuser), 'my profile', and 'logout'.
    / A link to the user’s shopping trolley</summary>
    
    ![My Account](static/images/readme/my_account.jpg)
@@ -589,8 +588,8 @@ Many messages are included to alert the user that they have accomplished an acti
 
 ### **Future Features**
 
-* The checkout form to show and automatically fill in the name of the logged-in user
-* Ability to run a sale on the website, caluclating discount for each item
+* The checkout form to show and automatically fill in the name of the logged-in user.
+* Ability to run a sale on the website, caluclating discount for each item.
 * Confirmation before deletion option, to prevent items been deleted by mistake. 
 
 ---
@@ -604,7 +603,7 @@ I have been mindful during coding to ensure that the website is as accessible as
 * Using semantic HTML.
 * Using descriptive alt attributes on images on the site.
 * Aria labels - providing information for screen readers where there are icons used and no text, such as footer icons.
-* Guaranteeing adequate colour contrast throughout the site.
+* Ensuring there is adequate colour contrast throughout the site.
 
 ---
 <br/>
@@ -625,8 +624,6 @@ HTML5, CSS3, Python, and JavaScript were used to create this website.
 * [Photopea](https://www.photopea.com) was used to edit and crop images.
 * [Chrome Dev Tools](https://developer.chrome.com/docs/devtools/) was used to troubleshoot and test features and solve issues with responsiveness and styling.
 * [Am I Responsive?](https://ui.dev/amiresponsive) was used to show the website on a range of devices.
-* [Unicorn Revealer](https://chrome.google.com/webstore/detail/unicorn-revealer/lmlkphhdlngaicolpmaakfmhplagoaln?hl=en-GB) was used for debugging.
-* [SQLAlchemy](https://www.sqlalchemy.org/) was used to connect Python code with the database.
 * [Psycopg2](https://www.psycopg.org/docs/) was used to connect Python code with the database. 
 * [Django](https://www.djangoproject.com/) is a high-level Python web framework.
 * [Bootstrap](https://getbootstrap.com/) was used for responsive and pre-designed CSS.
@@ -635,7 +632,6 @@ HTML5, CSS3, Python, and JavaScript were used to create this website.
 * [Bing Image Creator](https://www.bing.com/create) was used to create the artwork.
 * [Font Awesome](https://fontawesome.com/) was used for the icons.
 * [Amazon Web Services](https://aws.amazon.com/) was used to host the images for the Heroku-hosted site.
-* [RespImageLint](https://ausi.github.io/respimagelint/) was used to see how the images needed to be changed to optimise the page.
 * [Favicon Generator](https://favicon.io/favicon-converter/) was used to use convert my favicon design into something useable.
 
 ---
@@ -690,19 +686,13 @@ This project was deployed to Heroku using the following steps:
 
 <br/>
 
-### **Local Deployment**
-
-<br/>
-
 ---
-
-<br/>
 
 ## **Testing**
 
 Testing was ongoing throughout the entire build. I utilised Chrome developer tools while building to pinpoint and troubleshoot any issues as I went along. Both manual testing and validation was employed.  
 
-I tested the page and had 3 people also manually test it on their own devices. For validation, I used the W3C validator, CSS validator, Python Linter, JSHint validator, and Lighthouse. 
+I tested the page and had 3 people also manually test it on their own devices. For validation, I used the W3C validator, CSS validator, Python Linter and Lighthouse. 
 
 <br/>
 
@@ -732,6 +722,7 @@ The vast majority of the errors present were relating to the lines of code being
 line down or the use of the \ to break a line where appropriate. Some lines contained very long URLs which are not recommended to be broke. These lines were simply suffixed
 with the #noqa command which prevents them showing up in future linter validation scans.
 Other errors included no blank lines at the bottom of the python files, these were simply corrected by adding a blank line.
+Some 
 
 #### **Lighthouse**
 
@@ -786,9 +777,9 @@ The following tests were carried out by several people using several devices, ea
 
 | Expected | Test Performed | Result |
 | :---:    |    :----:      | :---:  |
-| User data is added and persists over time, including order history, commissions and wishlist. | Added multiple users with different data and checked that throughout logging in and out, and over the course of weeks, the data remained the same | Passed |
+| User data is added and persists over time, including order history and personal information | Added multiple users with different data and checked that throughout logging in and out, and over the course of weeks, the data remained the same | Passed |
 | User is linked to their order history and personal data | I made multiple user accounts with different data, and all users can see their own data | Passed |
-| User data can be edited and deleted from the database. | I tested that when deleting a user and then reestablishing them, none of their previous data is visible in their account. I also edited data such as user delivery details, and deleted items off the wishlist | Passed |
+| User data can be edited and deleted from the database. | I tested that when deleting a user and then reestablishing them, none of their previous data is visible in their account. I also edited data such as user delivery details | Passed |
 
 <br/>
 
