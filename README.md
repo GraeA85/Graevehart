@@ -675,7 +675,7 @@ This project was deployed to Heroku using the following steps:
 12. As we already have all our changes pushed to GitHub, we will use the Manual Deploy section and click Deploy Branch. This will start the build process. 
 13. Now, we have our project in place, and we have an empty database ready for use. As you may remember from our local development, we still need to add our tables to our database. To do this, we can click the “More” button and select “Run console.”
 14. Type python3 into the console and click Run
-15. In the terminal that opens, write "from eponymous_bosch import db" and then press enter.
+15. In the terminal that opens, write "from graevehart_import db" and then press enter.
 16. In the terminal, write "db.create_all()" and then press enter.
 17. Exit the Python terminal, by typing exit() and hitting enter, and close the console. Our Heroku database should now have the tables and columns created from our models.py file.
 18. The app should be up and running now, so click the “Open app” button
