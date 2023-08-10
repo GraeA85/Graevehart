@@ -260,6 +260,12 @@ Google Fonts was used to import the "Handlee" Font. This is used for all text th
 ---
 <br/>
 
+### **Database Schema**
+
+The database schema shows the current models in the database. The datbase model is based on the model used in the Boutique Ado Walkthrough and remains relatively unchanged.
+
+![Database Schema](static/images/readme/database_schema.jpg)
+
 ## **Features**
 
 The website is made up of 12 pages:
